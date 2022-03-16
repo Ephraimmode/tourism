@@ -1,0 +1,44 @@
+@media screen and (max-width: 943px){
+
+.unav {
+	display: none;
+}
+
+.search {
+	display: none;	
+}
+
+.social {
+	display: none;
+}
+
+.menu-cover {
+	width: 100%;
+}
+
+.menu-list {
+	
+	font-size: 40px;
+	display: inline-block;
+	float: right;
+}
+
+.menu-list a {
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
+	color: #0996fc;
+	text-decoration: none;
+}
+
+.menu-list a:hover {
+	background-color: #fff;
+}
+
+/*menu left panel when menu list toggled on sm-screen*/
+.menu-left {
+
+}
+/**/
+}
+/*end of screen 943px*/

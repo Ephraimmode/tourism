@@ -1,0 +1,90 @@
+html {
+	background: #e6e9e9;
+	background-image: lineer-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	/*padding: 2em 2em 4em;*/
+	/*max-width: 800px;*/
+	color: #545454;
+}
+
+/*header panel*/
+.header {
+	margin: 0 0 9px;
+	padding: 0 29px 12px 42px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	background-color: #f9f9f9;
+}
+
+/*logo*/
+.logo {
+	height: 45px;
+	/*margin: 0 646px 18px 0;*/
+}
+
+
+/*navigation top menu code on wide screen*/
+
+.unav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.uli {
+	float: left;
+	margin: 0;
+}
+
+.uli a {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 3px 15px;
+	background-color: #0996fc;
+	margin: 5px;
+	color: #fff;
+	/*font-weight: bold;*/
+}
+
+.uli a:hover {
+	background-color: #fd3644;
+}
+
+/*the two last login and registration class*/
+.log {
+	
+}
+.log:last-child {
+	float: right;
+}
+
+/*override of bootstrap btn class*/
+
+.btn {
+	background-color: #0996fc;
+}
+
+.btn:hover {
+	background-color: #fd3644;
+	border: 1px solid #333;
+}
+
+/*empty search class that is hidden when on smaller screen*/
+
+.search {
+
+}
+
+/*menu list class set to hidden on wide screen and displayed on small screen*/
+.menu-list {
+	display: none;
+}
