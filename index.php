@@ -28,12 +28,12 @@
 				<!-- social media icons -->
 				<div class="col-6 social p-2">
 				<span>
-					<img src="" width="32" height="32" alt="soc">
-					<img src="" width="32" height="32" alt="soc">
-					<img src="" width="32" height="32" alt="soc">
-					<img src="" width="32" height="32" alt="soc">
-					<img src="" width="32" height="32" alt="soc">
-					<img src="" width="32" height="32" alt="soc">
+					<img src="images/facebook.png" width="32" height="32" alt="soc">
+					<img src="images/instagram.png" width="32" height="32" alt="soc">
+					<img src="images/linkedin.png" width="32" height="32" alt="soc">
+					<img src="images/telegram.png" width="32" height="32" alt="soc">
+					<img src="images/whatsapp.png" width="32" height="32" alt="soc">
+					<img src="images/youtube.png" width="32" height="32" alt="soc">
 				</span>
 				</div>
 				<!-- social media icons ends -->
