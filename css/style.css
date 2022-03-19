@@ -15,6 +15,12 @@ body {
 	color: #545454;
 }
 
+/*headings styling*/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #0996fc;
+}
+
 /*header panel*/
 .header {
 	margin: 0 0 9px;
@@ -88,3 +94,53 @@ body {
 .menu-list {
 	display: none;
 }
+
+/*hide small screen menu bar on large screen*/
+
+.menubgleft {
+	display: none;
+}
+
+.subfooter {
+  	/*padding: 6px 35px 9px 362px;*/
+  	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  	background-color: #f9f9f9;
+}
+
+.contact-sm {
+	display: none;
+}
+
+.contact-lg {
+	display: block;
+}
+
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer ul>li a {
+	text-decoration: none;
+	color: #545454;
+}
+
+footer hr {
+	margin: 5px;
+	color: red;
+}
+
+.footer-bottom {
+  	background-color: #45aefb;
+}
+
+.footer-bottom p {
+	text-align: center;
+	padding: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/*slider*/
+
