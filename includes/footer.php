@@ -8,7 +8,7 @@
 	<div class="subfooter">
 		<div class="container-fluid row">
 		<div class="col-3">
-			<h5>Links</h5>
+			<h6 style="text-align: left;">Links</h6>
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About Us</a></li>
@@ -19,18 +19,18 @@
 		</div>
 
 		<div class="col-3">
-			<h5>Legal</h5>
+			<h6 style="text-align: left;">Legal</h6>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Stories</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Security</a></li>
+				<li><a href="#">Agreement</a></li>
 			</ul>
 		</div>
 
 		<!-- this contact area will only show on wide screen -->
 		<div class="col-3 contact-lg">
-			<h5>Contacts</h5>
+			<h6 style="text-align: left;">Contacts</h6>
 			<p>
 				<b>Address:</b> 12 Aboyne Gardens, AB10 7BW.<br>
 				<b>Email:</b> <a style="text-decoration: none;" href="mailto:info@upscotland.com">info@upscotland.com</a> <br>
@@ -41,7 +41,7 @@
 		<!-- this contact panel below will show on small screens -->
 
 		<div class="col-3 contact-sm">
-			<h5>Contacts</h5>
+			<h6 style="text-align: left;">Contacts</h6>
 			<p>
 				12 Aboyne Gardens, AB10 7BW.<br>
 				<a style="text-decoration: none;" href="mailto:info@upscotland.com">info@upscotland.com</a> <br>
@@ -67,7 +67,8 @@
 </footer>
 
 <!-- External jQuery included --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 	<!-- person jsCode -->
 <script src="js/script.js"></script>

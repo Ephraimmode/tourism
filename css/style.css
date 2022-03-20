@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 html {
 	background: #e6e9e9;
 	background-image: lineer-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
@@ -19,6 +22,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #0996fc;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 /*header panel*/
@@ -102,7 +107,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subfooter {
-  	/*padding: 6px 35px 9px 362px;*/
+	margin-bottom: 5px;
+  	padding-top: 10px;
   	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   	background-color: #f9f9f9;
 }
@@ -113,6 +119,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-lg {
 	display: block;
+}
+
+footer {
+	margin-top: 11px;
 }
 
 footer ul {
@@ -142,5 +152,232 @@ footer hr {
 	color: #fff;
 }
 
+
 /*slider*/
+
+.owl-carouselz{
+	width: 100%;
+	height: 50vh;
+}
+
+.slide {
+	width: 100%;
+	height: 50vh;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.slide::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50vh;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide-1 {
+	background-image: url(../images/banner.jpg);
+}
+
+.slide-2 {
+	background-image: url(../images/banner2.jpg);	
+}
+
+.slide-3 {
+	background-image: url(../images/banner3.jpg);	
+}
+
+.slide-content {
+	text-align: left;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0 20%;
+	align-content: #fff;
+}
+
+.slide-content h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.slide-content p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.slide-content button {
+	font-family: 'Roboto', serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	padding: 5px 10px;
+	border: none;
+	color: #0996fc;
+}
+
+.slide-content button:hover {
+	background-color: #fd3644 !important;
+	color: #fff !important;
+}
+
+.owl-dots {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 1%;
+}
+
+.owl-dots span {
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.owl-dots button {
+	border: none !important;
+	outline: none !important;
+}
+
+.owl-dots button:hover {
+	background-color: #fd3644 !important;
+	color: #333 !important;
+	border-radius: 50%;
+}
+
+.owl-nav button {
+	border: none !important;
+	outline: none !important;
+}
+
+.owl-nav button:hover {
+	background-color: #fd3644 !important;
+	color: #333 !important;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	top: 28%;
+	transform: translate(-50%);
+	color: #fff !important;
+	font-size: 65px !important;
+	font-weight: bolder !important;
+	background-color: none !important;
+}
+
+.owl-prev {
+	left: 1%;
+}
+
+.owl-next {
+	right: 1%;
+}
+
+.about-section-left {
+	border-left: solid 1px #fd3644;
+}
+
+.about-section-left p {
+	text-align: justify;
+}
+
+.about-section-left a {
+	font-family: 'Roboto', serif;
+	font-size: 15px;
+	text-transform: capitalize;
+	padding: 5px 10px;
+	border: none;
+	background-color: #0996fc;
+	text-decoration: none;
+	color: #fff;	
+}
+
+.about-section-left a:hover {
+	background-color: #fd3644;
+	color: #fff;
+}
+
+
+.story-area {
+	background-color: #f4f4f4;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	margin-bottom: 15px;
+	padding: 20px; 
+}
+
+.story-area p {
+	padding: 50px;
+	background-color: #fff;
+	border-radius: 6px;
+	color: #333;
+	text-align: justify;
+	max-height: 300px;
+	overflow: hidden;
+	text-indent: 30px;
+}
+
+.story-area p:first-letter {
+	font-weight: bolder;
+	color: #fd3644;
+}
+
+.story-a {
+	font-family: 'Roboto', serif;
+	font-size: 15px;
+	text-transform: capitalize;
+	padding: 5px 10px;
+	border: none;
+	background-color: #0996fc;
+	text-decoration: none;
+	color: #fff;
+}
+
+.story-a:hover {
+	background-color: #fd3644;
+	color: #fff;
+}
+
+.story-area:first-child {
+	border-top-right-radius: 30px;
+	border-right:2px  solid #fd3644;
+}
+
+.story-area:last-child {
+	border-bottom-left-radius: 30px;
+	border-left: 2px solid #fd3644;
+}
+
+.story-head-a {
+	color: #fd3644;
+	text-decoration: none;
+}
+
+.story-head-a:hover {
+	color: #0996fc;
+	text-decoration: underline;
+}
+
+.explore p {
+	text-transform: capitalize;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: solid 1px #0996fc;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 

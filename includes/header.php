@@ -12,6 +12,18 @@
 	<!-- below are personal css links -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/screens.css">
+
+	<!-- fonts on hero area adds -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<!-- awesome fonts from cdnjs.com-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+	<!-- owl Carousel from cdnjs.com-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 </head>
 <body>
 	<!-- header area -->
@@ -27,7 +39,7 @@
 			<div class="row">
 				<!-- social media icons -->
 				<div class="col-6 social p-2">
-				<span>
+				<span style="float: right;">
 					<img src="images/facebook.png" width="32" height="32" alt="soc">
 					<img src="images/instagram.png" width="32" height="32" alt="soc">
 					<img src="images/linkedin.png" width="32" height="32" alt="soc">
