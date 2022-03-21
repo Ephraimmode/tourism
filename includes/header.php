@@ -6,21 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
 		<!-- sourced from bootstrap offical website -->
-
-		<!-- this link has to come first (if not, it will mess with other functions) before others.. i needed it to make the forms work well.. -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
 	<!-- below are personal css links -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/screens.css">
-	<link rel="stylesheet" type="text/css" href="css/dashboard-style.css">
-<!-- ------------------------------------------------------- -->
+
 	<!-- fonts on hero area adds -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,24 +77,24 @@
 			<ul class="unav">
 				<span>
 				<li class="uli">
-					<a href="index.php">Home</a>
+					<a href="#">Home</a>
 				</li>
 				<li class="uli">
-					<a href="about.php">About us</a>
+					<a href="#">About us</a>
 				</li>
 				<li class="uli">
-					<a href="story.php">Stories</a>
+					<a href="#">Stories</a>
 				</li>
 				<li class="uli">
-					<a href="contact.php">Contact Us</a>
+					<a href="#">Contact Us</a>
 				</li>
 				</span>
 				<span class="log">
 				<li class="uli">
-					<a href="login.php">Login</a>
+					<a href="#">Login</a>
 				</li>
 				<li class="uli">
-					<a href="register.php">Register</a>
+					<a href="#">Register</a>
 				</li>
 				</span>
 			</ul>
@@ -115,12 +107,12 @@
 <!-- small screen menu bar -->
 <div class="menubgleft">
 	<ul>
-		<li><a href="index.php">Home</a></li>
-		<li><a href="about.php">About Us</a></li>
-		<li><a href="story.php">Stories</a></li>
-		<li><a href="contact.php">Contact Us</a></li>
-		<li><a href="login.php">Login</a></li>
-		<li><a href="register.php">Register</a></li>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Stories</a></li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Login</a></li>
+		<li><a href="#">Register</a></li>
 	</ul>
 	<center>
 	<form class="row g-3">
@@ -146,6 +138,6 @@
 <!-- header ends here... -->
 
 <!-- body container to structure all contents it is closed at the first code on footer-->
-<div class="container-fluid">
+<div class="container">
 
 
