@@ -20,3 +20,20 @@ $("document").ready(function(){
 		autoplayHoverPause: true,
 	})
 });
+
+
+// comment and view comment script
+
+$("document").ready(function(){
+	$("#comment, #viewComment").click(function(){
+		$(".comment").show("fade");
+	});
+});
+
+$("document").ready(function(){
+		$("#closeComment").click(function(){
+			$(".comment").hide("fade");
+		});
+});
+
+// the publish button to be done with ajax

@@ -1,5 +1,8 @@
 <?php include 'includes/header.php'; ?>
 
+<!-- body container -->
+<div class="container">
+
 <!-- hero area slider -->
 <div class="owl-carousel owl-theme">
 	<div class="slide slide-1">
@@ -158,6 +161,9 @@
 		</div>
 	</div>
 </div>
+<!-- story area ends here -->
 
+<!-- body container closed -->
+</div>
 
 <?php include 'includes/footer.php'; ?>
