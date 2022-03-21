@@ -82,13 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
 	background-color: #0996fc;
-	color: #fff;
 }
 
 .btn:hover {
 	background-color: #fd3644;
 	border: 1px solid #333;
-	color: #fff;
 }
 
 /*empty search class that is hidden when on smaller screen*/
@@ -305,7 +303,7 @@ footer hr {
 	color: #fff;
 }
 
-/*story area styling*/
+
 .story-area {
 	background-color: #f4f4f4;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -343,7 +341,6 @@ footer hr {
 .story-a:hover {
 	background-color: #fd3644;
 	color: #fff;
-	text-decoration: none;
 }
 
 .story-area:first-child {
@@ -364,10 +361,6 @@ footer hr {
 .story-head-a:hover {
 	color: #0996fc;
 	text-decoration: underline;
-}
-
-.comment {
-	display: none;
 }
 
 .explore p {
