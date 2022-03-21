@@ -22,7 +22,7 @@
 			<li><a href="#">message us</a></li>
 			<li><a href="#">log out</a></li>
 		</ul>
-
+ 
 	</div>
 <!-- first col up ends here -->
 

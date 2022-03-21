@@ -130,7 +130,7 @@
 			</div>
 		</div>
 	</div>
-
+ 
 	<div class="col-12 story-area">
 		<div class="row">
 			<div style="padding: 5px;" class="col-2">
