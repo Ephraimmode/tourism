@@ -12,6 +12,7 @@
 	<!-- below are personal css links -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/screens.css">
+	<link rel="stylesheet" href="css/dashboard.css">
 
 	<!-- fonts on hero area adds -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
