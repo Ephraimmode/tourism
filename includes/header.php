@@ -108,12 +108,12 @@
 <!-- small screen menu bar -->
 <div class="menubgleft">
 	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About Us</a></li>
-		<li><a href="#">Stories</a></li>
-		<li><a href="#">Contact Us</a></li>
-		<li><a href="#">Login</a></li>
-		<li><a href="#">Register</a></li>
+		<li><a href="index.php">Home</a></li>
+		<li><a href="about.php">About Us</a></li>
+		<li><a href="story.php">Stories</a></li>
+		<li><a href="contact.php">Contact Us</a></li>
+		<li><a href="login.php">Login</a></li>
+		<li><a href="register.php">Register</a></li>
 	</ul>
 	<center>
 	<form class="row g-3">
