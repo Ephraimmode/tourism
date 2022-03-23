@@ -20,3 +20,38 @@ $("document").ready(function(){
 		autoplayHoverPause: true,
 	})
 });
+
+
+// story comment section
+
+$("document").ready(function(){
+	$("#commentBtn, #viewComment").click(function(){
+		$(".comment").show("slow");
+	});
+});
+
+// comment colse btn
+
+$("document").ready(function(){
+	$("#closeComment").click(function(){
+		$(".comment").hide("slow");
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

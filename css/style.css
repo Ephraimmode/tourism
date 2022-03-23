@@ -363,6 +363,10 @@ footer hr {
 	text-decoration: underline;
 }
 
+.comment {
+	display: none;
+}
+
 .explore p {
 	text-transform: capitalize;
 	font-weight: bold;

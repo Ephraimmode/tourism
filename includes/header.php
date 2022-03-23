@@ -78,24 +78,24 @@
 			<ul class="unav">
 				<span>
 				<li class="uli">
-					<a href="#">Home</a>
+					<a href="index.php">Home</a>
 				</li>
 				<li class="uli">
-					<a href="#">About us</a>
+					<a href="about.php">About us</a>
 				</li>
 				<li class="uli">
-					<a href="#">Stories</a>
+					<a href="story.php">Stories</a>
 				</li>
 				<li class="uli">
-					<a href="#">Contact Us</a>
+					<a href="contact.php">Contact Us</a>
 				</li>
 				</span>
 				<span class="log">
 				<li class="uli">
-					<a href="#">Login</a>
+					<a href="login.php">Login</a>
 				</li>
 				<li class="uli">
-					<a href="#">Register</a>
+					<a href="register.php">Register</a>
 				</li>
 				</span>
 			</ul>
