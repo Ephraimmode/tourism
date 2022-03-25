@@ -42,22 +42,27 @@
 
 			<div class="col-sm-4 pad">
 				<p>
-					<span>Last Name</span> <i>Ephraim</i><br>
-					<span>Username</span> <i>ephraimmode</i><br>
-					<span>Last Name</span> <i>Ephraim</i><br>
-					<span>Account ID</span> <i>Ephraim</i><br>
-					<span>Joined</span> <i>March 17, 2023</i><br>
+					<span>Last Name :</span> <i>Ephraim</i><br>
+					<span>Username :</span> <i>ephraimmode</i><br>
+					<span>Status :</span> <i style="color: green;">Active</i><br>
+					<span>Account ID :</span> <i>UPSC23426</i><br>
+					<span>Joined :</span> <i>March 17, 2023</i><br>
 				</p>
 			</div>
 
 			<div class="col-sm-4 pad">
-				<p style="font-weight: bold; text-align: center;">
+				<p style="font-weight: bold; text-align: center; padding-top: 20px;">
 					Published Story <br> (<span style="color: orange;">0</span>)<br>
 					<i class="fas fa-book-open"></i>
 				</p>
 			</div>
 		</div>
 
+		<!-- post story form details -->
+
+		<div class="topbar">
+			<h6>publish your story below</h6>
+		</div>
 
 	</div>
 <!-- second col up ends here -->
