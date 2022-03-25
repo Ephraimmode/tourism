@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #0996fc;
 	text-transform: uppercase;
 	text-align: center;
+	padding-bottom: 0;
 }
 
 /*header panel*/

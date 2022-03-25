@@ -60,8 +60,53 @@
 
 		<!-- post story form details -->
 
-		<div class="topbar">
-			<h6>publish your story below</h6>
+		<div style="text-align: center; text-transform: uppercase;" class="topbar">
+			<span style="font-weight: bolder;">publish your story below </span>
+		</div>
+
+		<div class="form-pad">
+			<form action="#" method="post">
+				<div class="from-group mt-2">
+					<input class="form-control" type="text" name="storyTitle" placeholder="Enter Your story Title Here...">
+				</div>
+
+				<div class="from-group mt-2 row">
+					<div class="col-sm-10">
+						<input class="form-control" type="file" name="storyTitle">
+					</div>
+					<div class="col-sm-2">
+						<button class="btn form-control"><i style="color: #fff;" class="fa-solid fa-plus"></i></button>
+					</div>
+				</div>
+
+				<div class="from-group mt-2 row">
+					<div class="col-sm-4">
+						<select class="form-control" name="category">
+							<option>-- Category --</option>
+							<option>Nature</option>
+							<option>Artifacts</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<input class="form-control" placeholder="-- Country --" type="text" name="country">
+					</div>
+					<div class="col-sm-4">
+						<input class="form-control" type="text" placeholder="-- City --" name="city">
+					</div>
+				</div>
+
+				<textarea style="height: 150px;" class="form-control mt-2" name="story" placeholder="Type Your Story here..."></textarea>
+
+				<div class="row from-group">
+					<div class="col-sm-9">
+						<!-- just a place holder for the button to stand alone -->
+					</div>
+					<div class="col-sm-3">
+						<input class="btn form-control" type="submit" name="publish" value="Publish">
+					</div>
+				</div>
+
+			</form>
 		</div>
 
 	</div>
