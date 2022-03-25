@@ -375,7 +375,76 @@ footer hr {
 	padding: 5px;
 }
 
+/*pages background style with image*/
 
+.pagebg {
+	width: 100%;
+	background-image: url("../images/banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 20px;
+
+}
+/*about us content style*/
+.body-content {
+	background-color: #fff;
+	margin-top: 20px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+/*contact us layout and login content*/
+.contact-content {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	background-color: #fff;
+	margin-top: 20px;
+	padding-top: 30px;
+	border-radius: 10px;
+}
+
+/*container for register images*/
+.reg {
+	width: 70%;
+	margin: auto;
+}
+
+/* login background*/
+.loginbg {
+	background-image: url("../images/secure.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 150px;
+
+}
+
+.loginForm {
+	width: 60%;
+	margin: auto;
+}
+
+.loginForm form > input, .form-group {
+	margin: 2px;
+}
+
+input[type="submit"] {
+	text-align: center;
+	padding: 5px 20px;
+	background-color: #0996fc;
+	margin: 5px;
+	color: #fff; 
+	border:none;
+	border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+	background-color: #fd3644;
+	color: #fff;
+	border: none;
+}
 
 
 

@@ -3,7 +3,7 @@
 
 
 
-<div class="container">
+<div class="container pagebg">
 <!-- story area panel -->
 <div class="row">
 	<div class="col-12 story-area">

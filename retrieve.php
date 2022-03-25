@@ -4,8 +4,8 @@
 
 <!-- page wrapper container -->
 <div class="container pagebg">
-	<h4 style="text-align: left; color: #333;">Register | Become A Member</h4>
-	<p><i>Share your story to millions of people around the world...</i></p>
+	<h4 style="text-align: left; color: #333;">Forgot Password | Get Back You Password</h4>
+	<p><i>You can always retrieve your password in seconds...</i></p>
 <hr>
 	<div class="row contact-content loginbg">
 		<!-- content here -->
@@ -14,19 +14,13 @@
 				<center>
 				<form>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Username">
-					</div>
-
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Password">
+						<input type="text" class="form-control" placeholder="Enter Your Email">
 					</div>
 
 						<input style="color: #fff" type="submit" value="Login">
 				</form>
 				<p style="color: #fff; font-weight: bold;">
-					<a style="text-decoration: none; color: #fd3644;" href="retrieve.php?password">Forgot Password?</a>
-					<br>
-					Not yet a member? <a style="text-decoration: none; color: #fd3644;" href="register.php?register">Become A Member!</a>
+					Have your password now? <a style="text-decoration: none; color: #fd3644;" href="login.php?register">Back To Login!</a>
 				</p>
 				</center>
 			</div>

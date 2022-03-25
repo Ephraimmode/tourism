@@ -2,7 +2,11 @@
 <?php include 'includes/header.php'; ?>
 
 <!-- entire page container -->
-<div class="container">
+<div class="container pagebg">
+
+	<h4 style="text-align: left; color: #333;">Story | Read All Kinds Stories</h4>
+	<p><i>Explore and educate yourself...</i></p>
+	<hr>
 	
 
 <!-- story area panel -->

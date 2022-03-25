@@ -112,7 +112,7 @@
 				</center>
 			</div>
 			<div class="col-10">
-				<h6><a class="story-head-a" href="#">The title of story telling web</a></h6>
+				<h6><a class="story-head-a" href="story.php">The title of story telling web</a></h6>
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -123,7 +123,7 @@
 
 
 				</p>
-				<a class="story-a" href="#">Continue Reading...</a>
+				<a class="story-a" href="story.php">Continue Reading...</a>
 			</div>
 		</div>
 	</div>
@@ -142,7 +142,7 @@
 				</center>
 			</div>
 			<div class="col-10">
-				<h6><a class="story-head-a" href="#">The title of story telling web</a></h6>
+				<h6><a class="story-head-a" href="story.php">The title of story telling web</a></h6>
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -153,7 +153,7 @@
 
 				
 				</p>
-				<a class="story-a" href="#">Continue Reading...</a>
+				<a class="story-a" href="story.php">Continue Reading...</a>
 			</div>
 		</div>
 	</div>
