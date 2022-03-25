@@ -69,6 +69,20 @@
   background-color: #f9f9f9;
 }
 
+.pad p {
+	vertical-align: middle;
+	padding: 10px;
+	text-transform: capitalize;
+}
+
+/*profile pad image cover to center*/
+
+.profile-pad-cover {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .profile-pad {
 	width: 100px; 
 	height: 100px; 

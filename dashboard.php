@@ -7,7 +7,7 @@
 		<div class="topbar text-center">
 				<span class="tone">Menu</span>
 		</div>
- 
+  
 <!-- left side dashboard navigation -->
 
 		<ul>
@@ -33,17 +33,28 @@
 		</div>
 
 <!-- users information panel -->
-		<div class="row">
-			<div class="col-4">
-				
+		<div class="row pad-row">
+			<div class="col-sm-4">
+				<div class="profile-pad-cover">
+					<img class="profile-pad img-fluid" src="images/avatar.jpg">
+				</div>
 			</div>
 
-			<div class="col-4">
-				
+			<div class="col-sm-4 pad">
+				<p>
+					<span>Last Name</span> <i>Ephraim</i><br>
+					<span>Username</span> <i>ephraimmode</i><br>
+					<span>Last Name</span> <i>Ephraim</i><br>
+					<span>Account ID</span> <i>Ephraim</i><br>
+					<span>Joined</span> <i>March 17, 2023</i><br>
+				</p>
 			</div>
 
-			<div class="col-4">
-				
+			<div class="col-sm-4 pad">
+				<p style="font-weight: bold; text-align: center;">
+					Published Story <br> (<span style="color: orange;">0</span>)<br>
+					<i class="fas fa-book-open"></i>
+				</p>
 			</div>
 		</div>
 

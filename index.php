@@ -27,6 +27,9 @@
 
 <!-- end of slider -->
 
+<!-- home content container -->
+<div class="container">
+
 <h5 style="margin: 45px 0px">Virtual Tour About Up Scotland</h5>
 
 <!-- about upscotland section -->
@@ -158,6 +161,9 @@
 		</div>
 	</div>
 </div>
+
+</div>
+<!-- home content container ends here.. -->
 
 
 <?php include 'includes/footer.php'; ?>

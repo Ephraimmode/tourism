@@ -12,7 +12,7 @@
 	<!-- below are personal css links -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/screens.css">
-	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/dashboard-style.css">
 
 	<!-- fonts on hero area adds -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,6 +139,6 @@
 <!-- header ends here... -->
 
 <!-- body container to structure all contents it is closed at the first code on footer-->
-<div class="container">
+<div class="container-fluid">
 
 
