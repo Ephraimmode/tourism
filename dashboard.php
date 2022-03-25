@@ -97,14 +97,9 @@
 
 				<textarea style="height: 150px;" class="form-control mt-2" name="story" placeholder="Type Your Story here..."></textarea>
 
-				<div class="row from-group">
-					<div class="col-sm-9">
-						<!-- just a place holder for the button to stand alone -->
-					</div>
-					<div class="col-sm-3">
-						<input class="btn form-control" type="submit" name="publish" value="Publish">
-					</div>
-				</div>
+				<center>
+					<input class="btn" type="submit" name="publish" value="Publish">
+				</center>
 
 			</form>
 		</div>
