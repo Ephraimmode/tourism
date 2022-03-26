@@ -19,7 +19,7 @@
 		<div class="col-sm-6">
 			<!-- registration form content here -->
 
-			<form>
+			<form action="includes/logs.php" method="post">
 			<div class="form-group">
 				<label for="firstname">First Name</label>
 				<input type="text" class="form-control" name="fname" placeholder="Enter First Name" required>
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="password">Username</label>
+				<label for="password">Password</label>
 				<input type="password" class="form-control" name="passcode" placeholder="Enter Password" required>
 			</div>
 
@@ -70,7 +70,7 @@
 				<label for="agreement">Switch on the box if you agree to our <a style="text-decoration: none; color: red;" href="#">terms and condition</a>.</label>
 			</div>
 
-				<input style="color: #fff" type="submit" value="Register">
+				<input style="color: #fff" name="register" type="submit" value="Register">
 		</form>
 		</div>
 		

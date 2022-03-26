@@ -1,95 +1,102 @@
-<?php include ('includes/database.php'); ?>
+<!-- database added to the page for connection -->
+<?php include ('connect.php'); ?>
+
+<!-- registration code coming from the register action page -->
 <?php 
 
-if (isset($_POST['save'])) {
+if (isset($_POST['register'])) {
+
+// inputs coming from form fields
 
 $firstname = $_POST['fname'];
 $lastname = $_POST['lname'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$phone = $_POST['phone'];
-$company = $_POST['company'];
+$username = $_POST['user'];
+$password = $_POST['passcode'];
+$email = $_POST['emailx'];
+$country = $_POST['country'];
+$gender = $_POST['gender'];
+$occupation = $_POST['occupation'];
 
-$location_name = $_POST['locname'];
-$location_address = $_POST['locaddress'];
+// query to insert the data into data base users table.
 
-$remote = $_POST['remote'];
-$greet = $_POST['greet'];
-$selfservice = $_POST['selfservice'];
-$qrcode = $_POST['qrcode'];
-
-$messaging = $_POST['messaging'];
-$inperson = $_POST['inperson'];
-$tv = $_POST['tv'];
-
-
-$query = query("insert into users (firstname,lastname,email,password,phone,organisation,locname,locaddress,remote,greet,selfservice,qrcode,messaging,inperson,tv)
-values ('$firstname','$lastname','$email','$password','$phone','$company','$location_name','$location_address','$remote','$greet','$selfservice','$qrcode','$messaging','$inperson','$tv')                                    
+$query = query("INSERT INTO users (firstname,lastname,username,password,email,country,gender,occupation)
+values ('$firstname','$lastname','$username','$password','$email','$country','$gender','$occupation')                                    
 ");
+
+// confirm connection
 
 confirm($query);
 
-   	$user =  $email;
-    $pass =  $password;
+// for a user to login instantly after registration, the below comes are written...
+$user = $username; //username variable from above is re-assigned
+$pass =  $password; //password variable from above is re-assigned
 
-      $query = query("SELECT * FROM users WHERE  email='$user' && password='$pass'");
-      confirm($query);
-      $row = fetch_array($query);
-
+//checking the users table if the username and password coming from the input field is same as what is present in the database...
+$query = query("SELECT * FROM users WHERE  username='$user' && password='$pass'");
+//this confirms the query to see if there's any error...
+confirm($query);
+//This will obtain the data in rows querried.
+$row = fetch_array($query);
+//the conditional statement below check for the row that matches the login and if a true... the code block will be executed.
 if (mysqli_num_rows($query) > 0) {
+//Session will start immediately if the query returns true to track the user's activity within the browser.
+  session_start();
+  session_regenerate_id();
+  //the session is being assigned to the user ID.
+  $_SESSION['id'] = $row['user_id'];
+  //redirecting the user to 
+  header('location:../dashboard.php?registered');
+  session_write_close();
+  exit();
 
-            $seconds = 120 + time () ;
-            setcookie(loggedin, date ("F jS - a "), $seconds);
-            session_start();
-            session_regenerate_id();
-            $_SESSION['id'] = $row['user_id'];
-            header('location:dashboard/index.php');
-            session_write_close();
-            exit();
 }
 else{
-
-            //echo "<p style='color: red'><b>Wrong Login Details</b></p><br>";
-            header('location:index.php?invalidLogin');
-            session_write_close();
+//if the connection/query is invalid, the user will be redirected to the link indicated below.
+  header('location:register.php?invalidQuery');
+  session_write_close();
 
       
-    }
-
-//header('location:index.php?success');
 }
+
+//code for return if error.....
+}
+// end of registration code...
+//=================================================================================================
 
 
 
 // login codes here.....
-
+//check if the submit button was clicked
 if(isset($_POST['login'])){
-
-    $email = escape_string($_POST['email']);
-    $password = escape_string($_POST['password']);
-
-     $query = query("SELECT * FROM users WHERE  email='$email' && password='$password'");
-     confirm($query);
-     $row = fetch_array($query);
-
+// data coming in from input field validated with mysqli real escape string 
+    $username = escape_string($_POST['user']);
+    $password = escape_string($_POST['passcode']);
+//quering the database to see if the input matches with each other.
+    $query = query("SELECT * FROM users WHERE  username='$username' && password='$password'");
+//check of the query is error free
+    confirm($query);
+//extract the data from the table row as an array containing all the columns of the user if the query was true
+    $row = fetch_array($query);
+// blocks of codes to execute if the user details match as querried
 if (mysqli_num_rows($query) > 0) {
-
-           $seconds = 120 + time () ;
-      //     setcookie(loggedin, date ("F jS - a "), $seconds);
-           session_start();
-           session_regenerate_id();
-           $_SESSION['id'] = $row['user_id'];
-           header('location:dashboard/index.php');
-           session_write_close();
-           exit();
+//start session
+    session_start();
+    session_regenerate_id();
+//assign session to the user id
+    $_SESSION['id'] = $row['user_id'];
+// switch to user dashboard
+    header('location:../dashboard.php');
+    session_write_close();
+    exit();
 }
 else{
-
-           //echo "<p style='color: red'><b>Wrong Login Details</b></p><br>";
-           header('location:index.php?invalidLogin');
-           session_write_close();
-
+    // send the user back to login page if the login credentials are not correct.      
+    header('location:../login.php?invalidLogin');
+    session_write_close();
      
    }
 }
-                            ?>
+
+
+
+?>

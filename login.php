@@ -12,16 +12,16 @@
 		<div class="col-12">
 			<div class="loginForm">
 				<center>
-				<form>
+				<form action="includes/logs.php" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Username">
+						<input type="text" class="form-control" placeholder="Username" name="user">
 					</div>
 
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Password">
+						<input type="text" class="form-control" placeholder="Password" name="passcode">
 					</div>
 
-						<input style="color: #fff" type="submit" value="Login">
+						<input style="color: #fff" type="submit" value="Login" name="login">
 				</form>
 				<p style="color: #fff; font-weight: bold;">
 					<a style="text-decoration: none; color: #fd3644;" href="retrieve.php?password">Forgot Password?</a>
