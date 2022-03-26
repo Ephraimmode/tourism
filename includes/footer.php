@@ -10,7 +10,14 @@
 		<div class="col-3">
 			<h6 style="text-align: left;">Links</h6>
 			<ul>
-				<li><a href="index.php">Home</a></li>
+				<?php
+					if (!isset($_SESSION['user'])) {
+						echo '<li><a href="index.php">Home</a></li>';
+					}
+					else {
+						echo '<li><a href="dashboard.php">Dashboard</a></li>';
+					}
+				?>
 				<li><a href="about.php">About Us</a></li>
 				<li><a href="story.php">Stories</a></li>
 				<li><a href="contact.php">Contact Us</a></li>

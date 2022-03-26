@@ -1,11 +1,15 @@
 <?php
-	//Start session
-	session_start();
-	
-	//Check whether the session variable SESS_MEMBER_ID is present or not
-	if(!isset($_SESSION['id']) || (trim($_SESSION['id']) == '')) {
-		header("location: index.php");
+	//Check whether the session variable user is present(logged in or not) or not
+//this will only grant access to loggged in users and deny non-logged in access to the page it is present.
+
+//Start session
+//session_start();
+
+	if(!isset($session) || (trim($session) == '')) {
+		header("location: ../login.php?loginRequired");
 		exit();
 	}
-        $session_id=$_SESSION['id'];
+
+	
+        
 ?>

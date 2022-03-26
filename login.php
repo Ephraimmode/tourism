@@ -24,7 +24,7 @@
 						<input style="color: #fff" type="submit" value="Login" name="login">
 				</form>
 				<p style="color: #fff; font-weight: bold;">
-					<a style="text-decoration: none; color: #fd3644;" href="retrieve.php?password">Forgot Password?</a>
+					<a style="text-decoration: none; color: #fd3644;" href="retrieve.php?password">Reset Password</a>
 					<br>
 					Not yet a member? <a style="text-decoration: none; color: #fd3644;" href="register.php?register">Become A Member!</a>
 				</p>

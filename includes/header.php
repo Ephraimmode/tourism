@@ -1,3 +1,11 @@
+<?php 
+//database connection
+include 'connect.php';
+//session for all users
+include 'general_session.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,27 +85,72 @@
 			<!-- nav bar below -->
 			<ul class="unav">
 				<span>
-				<li class="uli">
-					<a href="index.php">Home</a>
-				</li>
+				<?php
+					if (!isset($_SESSION['user'])) {
+						echo '<li class="uli">
+							<a href="index.php">Home</a>
+							</li>';
+					}
+					else {
+						echo '<li class="uli">
+							<a href="dashboard.php">Dashboard</a>
+						</li>';
+					}
+				?>
 				<li class="uli">
 					<a href="about.php">About us</a>
 				</li>
-				<li class="uli">
-					<a href="story.php">Stories</a>
-				</li>
+				<?php
+					if (!isset($_SESSION['user'])) {
+						echo '<li class="uli">
+							<a href="story.php">Stories</a>
+						</li>';
+					}
+					else{
+						echo '<li class="uli">
+							<a href="story.php">Read Stories</a>
+						</li>';
+					}
+				?>
 				<li class="uli">
 					<a href="contact.php">Contact Us</a>
 				</li>
+				<?php
+					if (isset($_SESSION['user'])) {
+						echo '<li class="uli">
+								<a href="#">Message (<span style="font-weight: bold; color: orange;">0</span>)</a>
+							</li>
+							<li class="uli">
+								<a href="#">Gallery</a>
+							</li>';
+					}
+				?>
 				</span>
-				<span class="log">
+				<?php
+					if (!isset($_SESSION['user'])) {
+						echo '<span class="log">
 				<li class="uli">
 					<a href="login.php">Login</a>
 				</li>
 				<li class="uli">
 					<a href="register.php">Register</a>
 				</li>
-				</span>
+				</span>';
+					}
+					else{
+						echo '<span class="log">
+				<li class="uli">
+					<a href="?logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+				</li>
+				</span>';
+					}
+
+					if (isset($_GET['logout'])) {
+						session_destroy();
+						unset($session);
+						redirect('./index.php');
+					}
+				?>
 			</ul>
 	</div>
 

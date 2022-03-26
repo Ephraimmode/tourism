@@ -1,5 +1,8 @@
 <!-- database added to the page for connection -->
-<?php include ('connect.php'); ?>
+<?php 
+include ('connect.php');
+
+?>
 
 <!-- registration code coming from the register action page -->
 <?php 
@@ -43,7 +46,7 @@ if (mysqli_num_rows($query) > 0) {
   session_start();
   session_regenerate_id();
   //the session is being assigned to the user ID.
-  $_SESSION['id'] = $row['user_id'];
+  $_SESSION['user'] = $row['user_id'];
   //redirecting the user to 
   header('location:../dashboard.php?registered');
   session_write_close();
@@ -83,7 +86,7 @@ if (mysqli_num_rows($query) > 0) {
     session_start();
     session_regenerate_id();
 //assign session to the user id
-    $_SESSION['id'] = $row['user_id'];
+    $_SESSION['user'] = $row['user_id'];
 // switch to user dashboard
     header('location:../dashboard.php');
     session_write_close();
@@ -96,6 +99,35 @@ else{
      
    }
 }
+// end of login code......................
+//=============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
