@@ -32,7 +32,9 @@ include 'includes/table_query.php';
 <!-- second col starts here -->
 	<div class="col-8">
 		<div class="topbar">
-			Welcome to your dashboard <span class="tone2"><?php echo $user_row['firstname']; ?></span> | It's Tuesday 12, 2022
+			Welcome to your dashboard <span class="tone2"><?php echo $user_row['firstname']; ?></span> | It's <span style="font-weight: bold; color: pink;"><?php
+              echo date("h:i:sa");
+              ?></span>
 		</div>
 
 

@@ -1,4 +1,6 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php'; 
+
+?>
 
 <!-- hero area slider -->
 <div class="owl-carousel owl-theme">
@@ -146,7 +148,7 @@
 			</div>
 			<div class="col-10">
 				<h6><a class="story-head-a" href="story.php">The title of story telling web</a></h6>
-				<p>
+				<p class="preview">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

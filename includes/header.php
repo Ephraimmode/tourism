@@ -148,7 +148,8 @@ include 'general_session.php';
 					if (isset($_GET['logout'])) {
 						session_destroy();
 						unset($session);
-						redirect('./index.php');
+						//redirected to general session to completely destroy sessions.
+						redirect('general_session.php?logout');
 					}
 				?>
 			</ul>
