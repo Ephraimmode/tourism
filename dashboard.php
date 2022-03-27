@@ -35,6 +35,7 @@ include 'includes/table_query.php';
 			Welcome to your dashboard <span class="tone2"><?php echo $user_row['firstname']; ?></span> | It's Tuesday 12, 2022
 		</div>
 
+
 <!-- users information panel -->
 		<div class="row pad-row">
 			<div class="col-sm-4">
@@ -68,14 +69,14 @@ include 'includes/table_query.php';
 		</div>
 
 		<div class="form-pad">
-			<form action="includes/table_query.php" method="post">
+			<form action="dashboard.php" method="post" enctype="multipart/form-data">
 				<div class="from-group mt-2">
 					<input class="form-control" type="text" name="storyTitle" placeholder="Enter Your story Title Here...">
 				</div>
 
 				<div class="from-group mt-2 row">
 					<div class="col-sm-10">
-						<input class="form-control" type="file" name="storymedia">
+						<input class="form-control" type="file" name="storymedia[]" multiple>
 					</div>
 					<div class="col-sm-2">
 						<button class="btn form-control"><i style="color: #fff;" class="fa-solid fa-plus"></i></button>
@@ -83,24 +84,24 @@ include 'includes/table_query.php';
 				</div>
 
 				<div class="from-group mt-2 row">
-					<div class="col-sm-4">
+					 <div class="col-sm-4">
 						<select class="form-control" name="category">
 							<option value="other">-- Category --</option>
 							<?php 
-							//query category table... to retrieve category name on the select option
+								//query category table... to retrieve category name on the select option
 								$category_query = query("SELECT * FROM category");
 								confirm($category_query);
 								while ($category_row = fetch_array($category_query)){
 
 							?>
 
-								<option value="<?php echo $category_row['category_name'];; ?>"><?php echo $category_row['category_name'];; ?></option>
+								<option value="<?php echo $category_row['category_name']; ?>"><?php echo $category_row['category_name']; ?></option>
 								
 							<?php 
 								}
 							?>
 						</select>
-					</div>
+					</div> 
 					<div class="col-sm-4">
 						<input class="form-control" placeholder="-- Event Country --" type="text" name="country">
 					</div>
@@ -116,6 +117,67 @@ include 'includes/table_query.php';
 				</center>
 
 			</form>
+<?php 
+
+//Publish story code starts here......
+
+
+if (isset($_POST['publish'])) {
+
+  $t = escape_string($_POST['storyTitle']);
+  //the ucwords() is to capitalize the text before sending into database..
+  $title = ucwords($t);
+  $category = escape_string($_POST['category']);
+  $c = escape_string($_POST['country']);
+  $country = ucwords($c);
+  $cit = escape_string($_POST['city']);
+  $city = ucwords($cit);
+  $story_message = escape_string($_POST['story']);
+
+  $query = query("INSERT INTO story (publisher_user_id,story_title,story_category,event_country,city,story_message)
+     VALUES ('$session','$title','$category','$country','$city','$story_message')");
+  confirm($query);
+
+
+
+  //----------------start of image upload query----------------------------
+
+  foreach ($_FILES['storymedia']['name'] as $key => $value) {
+
+  	$rand = rand('11111111','99999999');
+	$images = $rand.'_'.$value;
+
+  	if (move_uploaded_file($_FILES['storymedia']['tmp_name'][$key],'uploads/'.$images)) {
+
+  		$query_story = query("SELECT story_id FROM story WHERE publisher_user_id='$session' ORDER BY story_id DESC LIMIT 1");
+  		confirm($query_story);
+  		$query_story_row = fetch_array($query_story);
+  		$story_id = $query_story_row['story_id'];
+
+  		echo $story_id;
+
+
+  		$query_img = query("INSERT INTO gallery (story_id, gallery_media, publisher_id) VALUES ('$story_id','$images','$session')");
+  		confirm($query_img);
+  		if ($query_img) {
+
+  			//redirect('dashboard.php?success');
+
+  		} // if statement close for check if success
+  	}// if statement colse for query
+  	
+  }//close foreach
+
+  //----------------end of image upload query----------------------------
+
+  redirect('dashboard.php?success');
+
+}// parent if(){} closed
+
+//publish story code ends here.............
+//=======================================================
+
+?>
 		</div>
 
 	</div>

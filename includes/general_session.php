@@ -3,6 +3,9 @@
 //Start session: this will allow all users (logged in and non-loggedin users) to access every page it is present
 session_start();
 
-$session = $_SESSION['user'];
+if (isset($_SESSION['user'])) {
+	$session = $_SESSION['user'];
+}
+
 
 ?>

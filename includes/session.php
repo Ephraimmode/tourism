@@ -6,9 +6,10 @@
 //session_start();
 
 	if(!isset($session) || (trim($session) == '')) {
-		header("location: ../login.php?loginRequired");
+		header("location: ./login.php?loginRequired");
 		exit();
 	}
+
 
 	
         
