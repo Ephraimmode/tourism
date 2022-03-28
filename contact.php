@@ -67,7 +67,9 @@
 
 
 
-
+<!-- news letter start -->
+	<?php include 'includes/newsletter.php'; ?>
+	<!-- newsletter end -->
 
 <!-- below is the footer included -->
 <?php include 'includes/footer.php'; ?>

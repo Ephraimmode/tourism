@@ -22,6 +22,9 @@ include 'general_session.php';
 	<link rel="stylesheet" type="text/css" href="css/screens.css">
 	<link rel="stylesheet" href="css/dashboard-style.css">
 
+	<!-- w3schools fa icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- fonts on hero area adds -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +36,8 @@ include 'general_session.php';
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+	
 </head>
 <body>
 	<!-- header area -->

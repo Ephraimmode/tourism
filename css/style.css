@@ -383,6 +383,45 @@ footer hr {
 .comment {
 	display: none;
 }
+/*comment paragraphs*/
+.comment .comment-pad {
+	border: solid 1px #0996fc;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: justify;
+	max-height: 300px;
+	overflow-y: scroll; 
+	background-color: lightgrey;
+}
+
+.comment p:first-letter {
+	font-weight: normal;
+	color: inherit;
+	text-transform: uppercase;
+}
+
+.comment-clip {
+	padding: 3px;
+	background-color: #ffe4c4;
+	border-radius: 5px;
+	color: #2f2f4f;
+	font-style: italic;
+	text-transform: capitalize;
+}
+
+.comment-message {
+	padding: 4px;
+	background-color: #66CDAA;
+	font-style: italic;
+	border-radius: 4px;
+}
+
+.comment-message:nth-child(even) {
+	padding: 4px;
+	background-color: #87CEEB;
+	font-style: italic;
+	border-radius: 4px;
+}
 
 .explore p {
 	text-transform: capitalize;
@@ -462,6 +501,24 @@ input[type="submit"]:hover {
 	color: #fff;
 	border: none;
 }
+
+button[type="submit"] {
+	text-align: center;
+	padding: 5px 20px;
+	background-color: #0996fc !important;
+	margin: 5px;
+	color: #fff; 
+	border:none;
+	border-radius: 3px;
+}
+
+button[type="submit"]:hover {
+	background-color: #fd3644 !important;
+	color: #fff;
+	border: none;
+}
+
+
 
 
 

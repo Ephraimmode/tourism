@@ -71,28 +71,79 @@
 
 				<div class="comment">
 					<hr style="color: red">
-					<p style="max-height: 200px; overflow-y: scroll; background-color: lightgrey;">
-						reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="comment-pad">
+						<?php
+
+							$comment_get = query("SELECT * FROM comment WHERE story_id='$story_id' ORDER BY comment_id DESC");
+							confirm($comment_get);
+
+							while ($comment_row = fetch_array($comment_get)) {
+								# code...
+						?>
+						<p class="comment-message">
+							<i class="fa fa-comments-o"></i><span class="comment-clip"><?php echo $comment_row['firstname'].' '.$comment_row['lastname']; ?></span>
+							<?php echo $comment_row['comment']; ?>
+							<br>
+							<i style="color: brown;"><?php echo $comment_row['time']; ?></i>
+						</p>
+
+
+						<?php
+						}
+						?>
+
+						<p class="comment-message">
+							<i class="fa fa-comments-o"></i><span class="comment-clip">Okonofuah Ephraim</span>
+							reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
 						
-						pt cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
+					</div>
 					<div>
-						<!-- <form> -->
+						<?php 
+
+						if (isset($_POST['publish']) && isset($_GET['key'])) {
+							$key = $_GET['key'];
+
+
+							$firstname = escape_string($_POST['firstname']);
+							$lastname = escape_string($_POST['lastname']);
+							$comment = escape_string($_POST['message']);
+
+							$comment_query = query("INSERT INTO comment (story_id,firstname,lastname,comment)
+							VALUES ('$key','$firstname','$lastname','$comment')");
+
+							confirm($comment_query);
+							if ($comment_query) {
+								redirect("read.php?key=".$key);
+
+							}
+						}
+
+
+						?>
+						<form action="<?php echo 'read.php?key='.$id; ?>" method="post">
+							<div style="margin-top: 7px;" class="row">
+								<div class="col-sm-6">
+									<input class="form-control" type="text" placeholder="First Name" name="firstname" required>
+								</div>
+								<div class="col-sm-6">
+									<input class="form-control" type="text" placeholder="Last Name" name="lastname" required>
+								</div>
+							</div>
 							<div style="margin-bottom: 5px;" class="form-row">
 								<div class="form-group col-12">
-									<textarea placeholder="Type your comment here..." style="height: 100px" class="form-control"></textarea>
+									<textarea placeholder="Type your comment here..." style="height: 100px" name="message" class="form-control" required></textarea>
 								</div>
 							</div>
 							<div class="form-group">
-									<button class="story-a">Publish</button>
+									<button type="submit" name="publish" class="story-a">Publish</button>
 									<button id="closeComment" style="background-color: orange;" class="story-a">Close</button>
 							</div>
 							<hr style="color: red">
-						<!-- </form> -->
-					</div>
+						</form>
+</div>
 				</div>
 
 				<button id="commentBtn" class="story-a">Comment</button> 
@@ -108,7 +159,9 @@
 
 
 
-
+<!-- news letter start -->
+	<?php include 'includes/newsletter.php'; ?>
+	<!-- newsletter end -->
 
 <!-- below is the footer included -->
 <?php include 'includes/footer.php'; ?>

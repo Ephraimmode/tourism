@@ -102,66 +102,58 @@
 
 <h5 style="margin: 45px 0px">Featured recent stories</h5>
 
+
 <div class="row">
 	<div class="col-12 story-area">
+		<?php 
+				//story retrieved from database.
+				$story_query = query("SELECT * FROM story WHERE approval='1' ORDER BY story_id DESC LIMIT 3");
+				confirm($story_query);
+				while ($story_row = fetch_array($story_query)) {
+
+					//retrieve columns from story table
+					$id = $story_row['story_id'];
+					$publisher = $story_row['publisher_user_id'];
+
+
+					//query the user table to get the publisher info and mear with story table.
+					$user_query = query("SELECT * FROM users WHERE user_id='$publisher'");
+					confirm($user_query);
+					$user_row = fetch_array($user_query);
+
+			?>
 		<div class="row">
 			<div style="padding: 5px;" class="col-2">
 				<center>
 				<img style="border-radius: 50%; width: 100px; height: 100px; margin-top: 10px" class="img-fluid mx-auto" src="images/avatar.jpg"> 
 				<br>
-				<b>Andrew Bucks</b>
+				<b><?php echo $user_row['firstname'].' '.$user_row['lastname']; ?></b>
 				<br>
-				<i>Posted 19/03/2022</i>
+				<i>Posted <?php echo $story_row['time_posted']; ?></i>
 				<br>
 				<i>Comments (<span style="color: orange;">0</span>)</i>
 				</center>
 			</div>
-			<div class="col-10">
-				<h6><a class="story-head-a" href="story.php">The title of story telling web</a></h6>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<div style="margin-bottom: 5px;border-bottom: solid 1px red; padding-bottom: 5px;" class="col-10">
+				<h6 style="text-align: left;"><a class="story-head-a" href="<?php echo 'read.php?key='.$id; ?>"><?php echo $story_row['story_title']; ?></a></h6>
+				<p style="max-height: 200px" class="preview">
+				<?php echo $story_row['story_message']; ?>
 
 
 				</p>
-				<a class="story-a" href="story.php">Continue Reading...</a>
+				<a class="story-a" href="<?php echo 'read.php?key='.$id; ?>">Continue Reading...</a>
 			</div>
 		</div>
+		<?php
+
+			} //end of the while loop for story body............
+
+			?>
 	</div>
  
-	<div class="col-12 story-area">
-		<div class="row">
-			<div style="padding: 5px;" class="col-2">
-				<center>
-				<img style="border-radius: 50%; width: 100px; height: 100px; margin-top: 10px" class="img-fluid mx-auto" src="images/avatar.jpg"> 
-				<br>
-				<b>Andrew Bucks</b>
-				<br>
-				<i>Posted 19/03/2022</i>
-				<br>
-				<i>Comments (<span style="color: orange;">0</span>)</i>
-				</center>
-			</div>
-			<div class="col-10">
-				<h6><a class="story-head-a" href="story.php">The title of story telling web</a></h6>
-				<p class="preview">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				
-				</p>
-				<a class="story-a" href="story.php">Continue Reading...</a>
-			</div>
-		</div>
-	</div>
+	<!-- news letter start -->
+	<?php include 'includes/newsletter.php'; ?>
+	<!-- newsletter end -->
 </div>
 
 </div>

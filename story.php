@@ -15,7 +15,7 @@
 		
 			<?php 
 				//story retrieved from database.
-				$story_query = query("SELECT * FROM story ORDER BY story_id DESC");
+				$story_query = query("SELECT * FROM story WHERE approval='1' ORDER BY story_id DESC");
 				confirm($story_query);
 				while ($story_row = fetch_array($story_query)) {
 
@@ -67,6 +67,8 @@
 </div>
 <!-- entire container ends here -->
 
-
+<!-- news letter start -->
+	<?php include 'includes/newsletter.php'; ?>
+	<!-- newsletter end -->
 <!-- below is the footer included -->
 <?php include 'includes/footer.php'; ?>
