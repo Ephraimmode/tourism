@@ -37,6 +37,16 @@ include 'general_session.php';
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 
+	<!-- google translator embedded -->
+	    </style>
+		<script type="text/javascript">
+		function googleTranslateElementInit() {
+  		new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+		}
+		</script>
+
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 	
 </head>
 <body>
@@ -200,4 +210,6 @@ include 'general_session.php';
 <!-- body container to structure all contents it is closed at the first code on footer-->
 <div class="container-fluid">
 
+<!-- translator cover -->
+<span style="width: 30%; height: auto; position: absolute; z-index: 20; left: 32%; top: 36px;" id="google_translate_element"></span>
 
