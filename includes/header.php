@@ -211,5 +211,5 @@ include 'general_session.php';
 <div class="container-fluid">
 
 <!-- translator cover -->
-<span style="width: 30%; height: auto; position: absolute; z-index: 20; left: 32%; top: 36px;" id="google_translate_element"></span>
+<span style="width: 30%; height: auto; position: absolute; z-index: 20; left: 32%; top: 28px;" id="google_translate_element"></span>
 

@@ -179,7 +179,7 @@ if ($user_row['user_role'] != "admin" && isset($session)) {
           else{
             echo '<span class="log">
         <li class="uli">
-          <a href="?logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+          <a href="dashboard.php"><i class="fa-solid fa-right-from-bracket"></i> User Mode</a>
         </li>
         </span>';
           }

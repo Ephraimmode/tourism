@@ -141,16 +141,15 @@
             $story_query = query("SELECT * FROM story ORDER BY story_id DESC");
             confirm($story_query);
             while ($story_row = fetch_array($story_query)) {
-            $session_id = $story_row['story_id'];
+            $story_delete = $story_row['story_id'];
       ?>
      
-      <tr><td><?php echo $story_row['story_id']; ?></td><td><p><?php echo $story_row['story_title']; ?></p></td><td><p><?php echo $story_row['story_category']; ?></p></td><td><p><?php echo $story_row['publisher_user_id']; ?></p></td><td><p><?php echo $story_row['time_posted']; ?></p></td><td width="140"><a href="<?php echo '?story_delete=' . $session_id; ?>"> Delete</a>
+      <tr><td><?php echo $story_row['story_id']; ?></td><td><p><?php echo $story_row['story_title']; ?></p></td><td><p><?php echo $story_row['story_category']; ?></p></td><td><p><?php echo $story_row['publisher_user_id']; ?></p></td><td><p><?php echo $story_row['time_posted']; ?></p></td><td width="140"><a href="<?php echo '?story_delete=' .$story_delete; ?>"> Delete</a>
       
       </td></tr>
         <?php } 
         
         if (isset($_GET['story_delete'])) {
-          $delete = $_GET['story_delete'];
 
           $query = query("DELETE FROM story WHERE story_id = '$story_delete'");
 

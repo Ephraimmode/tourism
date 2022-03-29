@@ -38,6 +38,10 @@
 				<i><span style="color: pink;"><?php echo $story_row['time_posted']; ?></span></i>
 				<br>
 				<i>Comments (<span style="color: orange;">0</span>)</i>
+				<br><br>
+				<i>Category: <br><span style="color: green;"><?php echo $story_row['story_category']; ?></span></i> <br>
+				<i>Event Country:<br><span style="color: green;"><?php echo $story_row['event_country']; ?></span></i><br>
+				<i>City:<br><span style="color: green;"><?php echo $story_row['city']; ?></span></i>
 				</center>
 			</div>
 			<div id="#pare" class="col-10">
@@ -91,13 +95,6 @@
 						<?php
 						}
 						?>
-
-						<p class="comment-message">
-							<i class="fa fa-comments-o"></i><span class="comment-clip">Okonofuah Ephraim</span>
-							reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
 						
 					</div>
 					<div>
